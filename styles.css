@@ -1,0 +1,418 @@
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap');
+
+
+/* GLOBAL */
+body {
+  background: #2e382e;
+  color: #f4ebe2;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Helvetica;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 70vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+
+nav .logo {
+  width: 100px;
+}
+
+h4,
+p,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Harry Potter', sans-serif;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+nav {
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+nav ul a {
+  color: #f4ebe2;
+}
+
+footer {
+  background: #111;
+  padding: 20px 0;
+}
+
+.btn {
+  color:#f4ebe2;
+  padding: 10px 40px;
+  background: #2e382e;
+  border: 2px solid #2e382e;
+}
+
+.btn:hover {
+  color: #2e382e;
+  background: #f4ebe2;
+  transition: .2s ease-out;
+}
+
+.page-title {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  font-size: 2em;
+  padding: 50px;
+}
+
+/* HOME */
+body.home {  
+  background-image: url(./assets/DMSP4NFINAL_websize.jpg);
+  background-position: center;
+}
+
+body.home div {
+  padding: 20px;
+}
+
+body.home main {
+  background: rgb(244, 235, 226, 0.9);
+  width: 60%;
+  margin: 0 auto 50px;
+  color: #2e382e;
+  padding: 100px;
+}
+
+body.home .icon {
+  width: 50px;
+}
+/* STORY PAGE */
+.story header {
+  background-image: url(./assets/DMSP1FINAL_websize.jpg);
+  background-position: center;
+}
+
+.story h1 {
+  font-size: 1.8em;
+}
+
+
+.daily-prophet {
+  background-image: url(./assets/paper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #222;
+  padding: 50px;
+  width: 70%;
+  max-width: 800px;
+  margin: 10% auto;
+}
+
+.daily-prophet div:first-of-type{
+  display: flex;
+  border-top: 5px double black;
+  border-bottom: 5px double black;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.daily-prophet div:first-of-type p {
+  width: 30%;
+}
+
+.daily-prophet p {
+  text-align: left;
+}
+
+.big-letter::first-letter {
+  font-family: 'Harry Potter', sans-serif;;
+  initial-letter: 2;
+}
+.daily-prophet div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.daily-prophet div:nth-of-type(2) h3 {
+  width: 40%;
+  background: #222;
+  color: #fff;
+  padding: 0;
+}
+
+.story h2 {
+  font-size: 5em;
+  text-transform: uppercase;
+}
+.story h2 span {
+  color: #bba53d;
+}
+/* CREW */
+.crew header {
+  background-image: url(./assets/DMSP3FINAL_websize.jpg)
+}
+
+#revelio {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border-radius: 100px;
+  height: 100px;
+  animation: bounce .6s infinite alternate;
+} 
+#revelio:hover {
+  cursor: pointer;
+  color: #fff;
+  background: #000;
+}
+
+@keyframes bounce {
+  to { transform: scale(1.2); }
+}
+
+@-moz-keyframes my-sparkle {
+  0%   {
+    opacity: 0;
+    -moz-transform: rotate(0deg) scale(0);
+  }
+  50%  {
+    opacity: 1;
+    -moz-transform: rotate(360deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: rotate(720deg) scale(0);
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cards li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  min-width: 250px;
+  height: 300px;
+  background: #fff;
+  color: #000;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cards h3 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.5em;
+}
+
+.crew section {
+  padding: 50px 0;
+  text-transform: none;
+  background: url(./assets/moody-eerie-chatgpt.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.cards .card-image {
+  background: url(./assets/moody-eerie-chatgpt.jpeg);
+  width: 240px;
+  object-fit:contain;
+}
+
+.crew-image {
+  max-width: 200px;
+  max-height: 250px;
+  object-fit:contain;
+  overflow: hidden;
+  opacity: 0;
+  transition: .8s ease-out;
+}
+
+.show { opacity: 1; }
+
+.cards img:hover {
+  opacity: 1;
+  transition: .6s ease-in-out;
+}
+
+.icon,
+.crew .icon {
+  filter: brightness(0) invert(1);
+  width: 50px;
+  height: 50px;
+  padding-top: 50px;
+}
+
+/* Q&A */
+.faq header {
+  background-image: url(./assets/DMSP4NFINAL_websize.jpg)
+}
+
+.faq .notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.faq .notes li {
+  background: #f4ebe2;
+  margin: 20px;
+  color: #111;
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+}
+
+/* EVENT DETAILS */
+.event header {
+  background-image: url(./assets/DMSP2FINAL_websize.jpg);
+  background-position: top;
+}
+
+.event .btn {
+  font-family: 'Harry Potter', sans-serif;
+  color: #2e382e;
+  background: #f4ebe2;
+  font-size: 1.5em;
+}
+
+.event .btn:hover {
+  background: #2e382e;
+  color: #f4ebe2;
+  cursor: pointer;
+}
+
+.event main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin: 2em;
+}
+
+.event section img {
+  height: 100vh;
+  margin: 2em;
+  
+}
+
+.event div {
+
+}
+/* WELCOME PAGE */
+.welcome {
+  background-image: url(./assets/DMSP5NFINAL_websize.jpg);
+  display: grid;
+  place-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.overlay-1 {
+  position: absolute;
+  top: 0 ;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    270deg,
+    rgba(226, 224, 211, 0) 0%,
+    rgba(0, 0, 0, 0.8687850140056023) 100%
+  );
+}
+
+.overlay-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250.625em;
+  height: 203.8em;
+  background: url(https://terriotech.com/cloud-overlay.png) 0 100%
+    repeat-x;
+  -webkit-animation: cloudLoop 80s linear infinite;
+  animation: cloudLoop 80s linear infinite;
+  z-index: 2;
+  pointer-events: none;
+  height: 43.75em;
+}
+@-webkit-keyframes cloudLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes cloudLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.welcome .banner-text {
+  z-index: 1000;
+}
