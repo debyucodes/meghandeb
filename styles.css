@@ -1,19 +1,28 @@
 @import url("https://fonts.cdnfonts.com/css/harry-potter");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap");
 @import url("https://fonts.cdnfonts.com/css/callie-chalk-font");
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
 
 /* GLOBAL */
 body {
-  background: #2e382e;
+  /* background: #2e382e; */
+  background: rgba(46, 56, 46);
   color: #f4ebe2;
   text-align: center;
   /* text-transform: uppercase; */
-  font-family: Helvetica;
+  font-family: "Montserrat", sans-serif;
   width: 100%;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 5% auto;
 }
 
 a {
@@ -42,7 +51,7 @@ a {
 h1,
 h2,
 h3 {
-  font-family: "Harry Potter", sans-serif;
+  font-family: "Quintessential", serif;
   text-transform: capitalize;
 }
 
@@ -70,7 +79,9 @@ nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
 }
 
 nav ul a {
@@ -97,11 +108,20 @@ footer {
 
 .page-title {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   height: 100%;
   font-size: 2em;
   padding: 50px;
+  position: relative;
+  top: 10%;
+}
+
+.page-title h1 {
+  background: #2e382e;
+  padding: 10px 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 10;
 }
 
 /* HOME */
@@ -117,13 +137,28 @@ body.home div {
 body.home main {
   background: rgb(244, 235, 226, 0.9);
   width: 60%;
-  margin: 0 auto 50px;
+  margin: 0 auto 20px;
   color: #2e382e;
-  padding: 100px;
+  padding: 50px;
 }
 
 body.home .icon {
   width: 50px;
+}
+
+.home main {
+  display: flex;
+  text-align: left;
+}
+
+.home main div {
+  width: 50%;
+}
+
+.countdown {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
 /* STORY PAGE */
 .story header {
@@ -165,6 +200,7 @@ body.home .icon {
 .big-letter::first-letter {
   font-family: "Harry Potter", sans-serif;
   initial-letter: 2;
+  margin-right: 5px;
 }
 .daily-prophet div:nth-of-type(2) {
   display: flex;
@@ -179,57 +215,29 @@ body.home .icon {
 }
 
 .story h2 {
-  font-size: 5em;
+  font-family: "Harry Potter", sans-serif;
+  font-size: 3.5em;
   text-transform: uppercase;
 }
 .story h2 span {
   color: #bba53d;
 }
+
+.story h3 {
+  font-family: "Harry Potter", sans-serif;
+}
+/* dicey shit let's see how it goes */
+
 /* CREW */
 .crew header {
   background-image: url(./assets/DMSP3FINAL_websize.jpg);
 }
 
-#revelio {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  border-radius: 100px;
-  height: 100px;
-  animation: bounce 0.6s infinite alternate;
-}
-#revelio:hover {
-  cursor: pointer;
-  color: #fff;
-  background: #000;
-}
-
-@keyframes bounce {
-  to {
-    transform: scale(1.2);
-  }
-}
-
-@-moz-keyframes my-sparkle {
-  0% {
-    opacity: 0;
-    -moz-transform: rotate(0deg) scale(0);
-  }
-  50% {
-    opacity: 1;
-    -moz-transform: rotate(360deg) scale(1);
-  }
-  100% {
-    opacity: 0;
-    -moz-transform: rotate(720deg) scale(0);
-  }
-}
-
 .cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 50vw;
   margin: 0 auto;
 }
 
@@ -241,14 +249,38 @@ body.home .icon {
   -moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
   margin: 10px;
-  padding: 20px;
-  width: 250px;
-  min-width: 250px;
-  height: 300px;
+  padding: 10px;
+  width: 200px;
+  min-width: 200px;
+  height: 250px;
   background: #fff;
   color: #000;
   font-weight: 400;
   font-style: normal;
+}
+
+.cards li:nth-of-type(1) {
+  transform: rotate(10deg);
+}
+
+.cards li:nth-of-type(2) {
+  transform: rotate(5deg);
+}
+
+.cards li:nth-of-type(3) {
+  transform: rotate(-10deg);
+}
+
+.cards li:nth-of-type(4) {
+  transform: rotate(5deg);
+}
+
+.cards li:nth-of-type(5) {
+  transform: rotate(-5deg);
+}
+
+.cards li:last-of-type {
+  transform: rotate(20deg);
 }
 
 .cards h3 {
@@ -259,34 +291,33 @@ body.home .icon {
 .crew section {
   padding: 50px 0;
   text-transform: none;
-  background: url(./assets/moody-eerie-chatgpt.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  flex-wrap: wrapped;
+}
+
+.crew section div {
+  width: 50vw;
 }
 
 .cards .card-image {
   background: url(./assets/moody-eerie-chatgpt.jpeg);
-  width: 240px;
+  width: 180px;
   object-fit: contain;
 }
 
 .crew-image {
-  max-width: 200px;
-  max-height: 250px;
+  max-width: 150px;
+  max-height: 200px;
   object-fit: contain;
   overflow: hidden;
-  opacity: 0;
   transition: 0.8s ease-out;
 }
 
 .show {
   opacity: 1;
-}
-
-.cards img:hover {
-  opacity: 1;
-  transition: 0.6s ease-in-out;
 }
 
 .icon,
@@ -320,33 +351,37 @@ body.home .icon {
 .event header {
   background-image: url(./assets/DMSP2FINAL_websize.jpg);
   background-position: top;
+  position: relative;
 }
 
-.event .btn {
-  font-family: "Harry Potter", sans-serif;
-  color: #2e382e;
-  background: #f4ebe2;
-  font-size: 1.5em;
-}
-
-.event .btn:hover {
-  background: #2e382e;
-  color: #f4ebe2;
-  cursor: pointer;
-}
-
-.event main {
+.event section {
+  text-align: left;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  margin: 2em;
+  position: relative;
 }
 
-.event section img {
-  height: 100vh;
-  margin: 2em;
+.event section div:last-of-type {
+  padding: 0 20px;
+}
+
+.event section div:first-of-type {
+  border-right: #f4ebe2 solid 5px;
+  width: 300px;
+  min-width: 300px;
+  text-align: right;
+  padding: 0 20px;
+}
+
+.event section::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: block;
+  background: #f4ebe2;
+  border-radius: 50%;
+  position: absolute;
+  left: 335px;
+  top: 40px;
 }
 
 /* WELCOME PAGE */
@@ -359,12 +394,6 @@ body.home .icon {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-}
-
-.hollow {
-  font: 800 50px "Callie Chalk Font";
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px;
 }
 
 .overlay-1 {
@@ -419,4 +448,35 @@ body.home .icon {
 
 .welcome .banner-text {
   z-index: 1000;
+}
+
+.typewriter {
+  display: flex;
+  justify-content: center;
+}
+
+.typewriter h1 {
+  font: 800 50px "Callie Chalk Font";
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px;
+  margin-inline: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid;
+  animation: typing 2s steps(22) forwards, blink 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
