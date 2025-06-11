@@ -25,6 +25,10 @@ body {
   margin: 5% auto;
 }
 
+main {
+  padding-top: 50px;
+}
+
 a {
   text-decoration: none;
 }
@@ -50,7 +54,8 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+label {
   font-family: "Quintessential", serif;
   text-transform: capitalize;
 }
@@ -63,11 +68,17 @@ h2 {
   font-size: 2em;
 }
 
-nav {
+/* nav {
   width: 100%;
   background: rgba(0, 0, 0, 0);
   padding: 0;
   margin: 0;
+} */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 ul {
@@ -77,15 +88,42 @@ ul {
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  width: 80%;
   max-width: 800px;
 }
 
 nav ul a {
   color: #f4ebe2;
+  padding: 0 20px;
+  font-size: 0.8em;
+}
+
+nav h2,
+nav .rsvp {
+  width: 20%;
+}
+
+nav .rsvp {
+  position: relative;
+}
+
+nav .rsvp a {
+  position: absolute;
+  background: #fff;
+  padding: 10px 20px;
+  display: block;
+  align-self: center;
+  right: 0;
+  top: 30%;
+  color: black;
+  border: 2px solid white;
+}
+
+nav .rsvp a:hover {
+  background: none;
+  color: white;
+  transition: all 0.3s;
 }
 
 footer {
@@ -110,18 +148,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  font-size: 2em;
-  padding: 50px;
+  /* height: 100%; */
+  font-size: 5em;
+  padding: 0;
   position: relative;
-  top: 10%;
+  top: 25%;
 }
 
 .page-title h1 {
-  background: #2e382e;
   padding: 10px 30px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  z-index: 10;
 }
 
 /* HOME */
@@ -130,7 +165,8 @@ body.home {
   background-position: center;
 }
 
-body.home div {
+body.home main div,
+.countdown p {
   padding: 20px;
 }
 
@@ -214,7 +250,7 @@ body.home .icon {
   padding: 0;
 }
 
-.story h2 {
+.story main h2 {
   font-family: "Harry Potter", sans-serif;
   font-size: 3.5em;
   text-transform: uppercase;
@@ -231,6 +267,22 @@ body.home .icon {
 /* CREW */
 .crew header {
   background-image: url(./assets/DMSP3FINAL_websize.jpg);
+}
+
+.crew .page {
+  background: linear-gradient(to right, #e0d3af 92%, #696355 100%);
+  padding-bottom: 50px;
+  border-radius: 0 15px 15px 0;
+}
+
+.crew .page-2 {
+  background: linear-gradient(to left, #e0d3af 95%, #696355 100%);
+  padding-bottom: 50px;
+  border-radius: 15px 0 0 15px;
+}
+
+.crew main h2 {
+  color: black;
 }
 
 .cards {
@@ -250,9 +302,9 @@ body.home .icon {
   box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
   margin: 10px;
   padding: 10px;
-  width: 200px;
-  min-width: 200px;
-  height: 250px;
+  width: 150px;
+  min-width: 150px;
+  height: 200px;
   background: #fff;
   color: #000;
   font-weight: 400;
@@ -296,6 +348,7 @@ body.home .icon {
   position: relative;
   display: flex;
   flex-wrap: wrapped;
+  margin: 30px;
 }
 
 .crew section div {
@@ -304,13 +357,13 @@ body.home .icon {
 
 .cards .card-image {
   background: url(./assets/moody-eerie-chatgpt.jpeg);
-  width: 180px;
-  object-fit: contain;
+  width: 140px;
+  object-fit: cover;
 }
 
 .crew-image {
-  max-width: 150px;
-  max-height: 200px;
+  max-width: 130px;
+  max-height: 150px;
   object-fit: contain;
   overflow: hidden;
   transition: 0.8s ease-out;
@@ -322,7 +375,6 @@ body.home .icon {
 
 .icon,
 .crew .icon {
-  filter: brightness(0) invert(1);
   width: 50px;
   height: 50px;
   padding-top: 50px;
@@ -334,22 +386,56 @@ body.home .icon {
 }
 
 .faq .notes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-}
-
-.faq .notes li {
   background: #f4ebe2;
-  margin: 20px;
-  color: #111;
   -webkit-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
+  text-align: left;
+  padding: 20px;
+}
+
+.faq .notes li {
+  margin: 20px;
+  color: #111;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
+.tab input {
+  position: absolute;
+  opacity: 0;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.tab input:checked ~ .tab-content {
+  max-height: 10rem;
+}
+
+.tab-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+}
+
+.tab-label .fas {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.tab input:checked + .tab-label .fas {
+  transform: rotate(-180deg);
 }
 
 /* EVENT DETAILS */
 .event header {
-  background-image: url(./assets/DMSP2FINAL_websize.jpg);
+  background-image: url(./assets/DBN24final_1.jpg);
   background-position: top;
   position: relative;
 }
@@ -456,7 +542,8 @@ body.home .icon {
 }
 
 .typewriter h1 {
-  font: 800 50px "Callie Chalk Font";
+  /* font: 800 50px "Callie Chalk Font"; */
+  font-size: 3em;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px;
   margin-inline: auto;
