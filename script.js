@@ -31,3 +31,16 @@ function timer() {
 }
 
 setInterval(timer, 1000);
+
+// mobile menu
+function showBar() {
+  const mobileBar = document.querySelector(".mobile-bar");
+
+  mobileBar.style.display = "flex";
+}
+
+function hideBar() {
+  const mobileBar = document.querySelector(".mobile-bar");
+
+  mobileBar.style.display = "none";
+}

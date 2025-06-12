@@ -15,19 +15,34 @@
       src="https://kit.fontawesome.com/3e2ecb9775.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="./script.js"></script>
   </head>
   <body class="crew">
     <header>
-      <nav>
+      <nav class="browser-nav">
         <h2>Meg & Deb</h2>
-        <ul>
+        <ul class="hide-on-mobile">
           <li><a href="index.html">Home</a></li>
           <li><a href="event.html">Schedule</a></li>
           <li><a href="faq.html">Q & A</a></li>
           <li><a href="crew.html">Crew</a></li>
           <li><a href="story.html">Story</a></li>
+          <li class="rsvp"><a href="#">RSVP</a></li>
         </ul>
-        <div class="rsvp"><a href="">RSVP</a></div>
+        <ul class="mobile-bar">
+          <li onclick="hideBar()" class="burger">
+            <i class="fas fa-times"></i>
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="event.html">Schedule</a></li>
+          <li><a href="faq.html">Q & A</a></li>
+          <li><a href="crew.html">Crew</a></li>
+          <li><a href="story.html">Story</a></li>
+          <li><a href="">RSVP</a></li>
+        </ul>
+        <div onclick="showBar()" class="burger burger-open">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
       <div class="page-title">
         <h1>Crew</h1>
