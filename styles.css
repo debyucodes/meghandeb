@@ -203,6 +203,7 @@ body.home .icon {
   display: flex;
   justify-content: space-between;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .polaroid img {
@@ -211,7 +212,7 @@ body.home .icon {
   object-fit: cover;
   border: 10px solid white;
   position: relative;
-  margin: 20px;
+  margin: 15px;
 }
 
 /* STORY PAGE */
@@ -283,6 +284,23 @@ body.home .icon {
 /* dicey shit let's see how it goes */
 
 /* CREW */
+.crew section {
+  padding: 50px 0;
+  text-transform: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-wrap: wrapped;
+  margin: 30px;
+  position: relative;
+}
+
+.crew section .page,
+.crew section .page-2 {
+  width: 48vw;
+}
+
 .crew header {
   background-image: url(./assets/DMSP3FINAL_websize.jpg);
 }
@@ -420,23 +438,6 @@ body.home .icon {
 .cards h3 {
   font-family: "Permanent Marker", cursive;
   font-size: 1.5em;
-}
-
-.crew section {
-  padding: 50px 0;
-  text-transform: none;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  flex-wrap: wrapped;
-  margin: 30px;
-  position: relative;
-}
-
-.crew section .page,
-.crew section .page-2 {
-  width: 48vw;
 }
 
 .cards .card-image {
@@ -673,6 +674,8 @@ body.home .icon {
 .mobile-bar a {
   width: 100%;
   margin: 20px auto;
+  font-size: 2em;
+  margin: 15px;
 }
 
 .burger {
@@ -689,6 +692,22 @@ body.home .icon {
   display: none;
 }
 
+@media (max-width: 1100px) {
+  .crew section {
+    flex-direction: column;
+  }
+
+  .crew section .page,
+  .crew section .page-2 {
+    width: 80vw;
+    margin: 10px auto;
+  }
+
+  .spine {
+    display: none;
+  }
+}
+
 @media (max-width: 800px) {
   .hide-on-mobile {
     display: none;
@@ -701,6 +720,9 @@ body.home .icon {
   .page-title {
     font-size: 3em;
     top: 45%;
+  }
+  .polaroid img {
+    margin: 10px auto;
   }
 }
 
