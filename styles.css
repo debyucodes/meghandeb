@@ -68,13 +68,6 @@ h2 {
   font-size: 2em;
 }
 
-/* nav {
-  width: 100%;
-  background: rgba(0, 0, 0, 0);
-  padding: 0;
-  margin: 0;
-} */
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -92,12 +85,67 @@ nav ul {
   align-items: center;
 }
 
-nav ul a {
+/* nav ul a {
   color: #f4ebe2;
   padding: 0 20px;
   font-size: 0.8em;
+  transition: 0.5s ease all;
 }
 
+nav ul a:hover {
+  color: rgba(46, 56, 46);
+  border-bottom: 1px solid rgba(46, 56, 46);
+} */
+
+nav ul a {
+  color: #f4ebe2;
+  padding: 10px 24px;
+  font-size: 0.8em;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Border elements */
+nav ul a::before,
+nav ul a::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(46, 56, 46);
+  transition: transform 0.3s ease;
+}
+
+/* Left border */
+nav ul a::before {
+  width: 2px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+/* Bottom border */
+nav ul a::after {
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+nav ul a:hover {
+  color: rgba(46, 56, 46);
+}
+
+nav ul a:hover::before {
+  transform: scaleY(1);
+}
+
+nav ul a:hover::after {
+  transform: scaleX(1);
+}
 nav .rsvp a {
   background: #fff;
   padding: 10px 20px;
@@ -119,10 +167,8 @@ footer {
 }
 
 .btn {
-  /* color: #f4ebe2; */
   color: #2e382e;
   padding: 10px 40px;
-  /* background: #2e382e; */
   background: #f4ebe2;
   border: 2px solid #f4ebe2;
 }
@@ -201,7 +247,7 @@ body.home .icon {
 /* homepage polaroid hanger */
 .polaroid {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: relative;
   flex-wrap: wrap;
 }
@@ -213,6 +259,11 @@ body.home .icon {
   border: 10px solid white;
   position: relative;
   margin: 15px;
+}
+
+.message {
+  width: 80%;
+  max-width: 1000px;
 }
 
 /* STORY PAGE */
@@ -451,7 +502,6 @@ body.home .icon {
   max-height: 150px;
   object-fit: contain;
   overflow: hidden;
-  transition: 0.8s ease-out;
 }
 
 .show {
@@ -486,6 +536,10 @@ body.home .icon {
   position: relative;
 }
 
+.faq .notes ol li {
+  border: none;
+}
+
 .tab input {
   position: absolute;
   opacity: 0;
@@ -494,11 +548,11 @@ body.home .icon {
 .tab-content {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in;
 }
 
 .tab input:checked ~ .tab-content {
-  max-height: 10rem;
+  max-height: 20rem;
 }
 
 .tab-label {
@@ -541,18 +595,20 @@ body.home .icon {
   min-width: 300px;
   text-align: right;
   padding: 0 20px;
+  position: relative;
 }
 
-.event section::after {
+/* rewriting the dot */
+.event section div:first-of-type::after {
   content: "";
   width: 15px;
   height: 15px;
   display: block;
   background: #f4ebe2;
-  border-radius: 50%;
   position: absolute;
-  left: 335px;
-  top: 40px;
+  top: 30%;
+  right: -3%;
+  border-radius: 50%;
 }
 
 /* WELCOME PAGE */
@@ -663,7 +719,7 @@ body.home .icon {
   z-index: 999;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   display: none;
   flex-direction: column;
   align-items: flex-start;
@@ -706,15 +762,33 @@ body.home .icon {
   .spine {
     display: none;
   }
+
+  .cards li {
+    width: 130px;
+    min-width: 130px;
+  }
 }
 
 @media (max-width: 800px) {
+  .home h1 {
+    font-size: 3em;
+  }
+
   .hide-on-mobile {
     display: none;
   }
 
   .burger {
     display: block;
+  }
+
+  nav ul a:hover {
+    color: inherit;
+  }
+
+  nav ul a::before,
+  nav ul a::after {
+    display: none;
   }
 
   .page-title {
@@ -724,9 +798,39 @@ body.home .icon {
   .polaroid img {
     margin: 10px auto;
   }
+
+  .event section div {
+    font-size: 0.6em;
+  }
+
+  .event section div:first-of-type {
+    border-right: #f4ebe2 solid 2px;
+    width: 40%;
+    min-width: 40%;
+  }
+  .event section div:first-of-type::after {
+    right: -6px;
+    top: 30%;
+    width: 10px;
+    height: 10px;
+  }
+
+  .tab input:checked ~ .tab-content {
+    max-height: 40rem;
+  }
 }
 
 @media (max-width: 500px) {
+  .home h1 {
+    font-size: 2em;
+  }
+
+  .polaroid img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+  }
+
   .mobile-bar {
     width: 100%;
   }
@@ -734,5 +838,18 @@ body.home .icon {
   .page-title,
   .story main h2 {
     font-size: 2em;
+  }
+
+  .event section div:first-of-type::after {
+    top: 20%;
+  }
+
+  .crew .page::before,
+  .crew .page::after {
+    display: none;
+  }
+
+  .tab .tab-label {
+    width: 90%;
   }
 }
