@@ -44,3 +44,15 @@ function hideBar() {
 
   mobileBar.style.display = "none";
 }
+
+// password check
+function checkPassword() {
+  const input = document.getElementById("password").value;
+  const correctPassword = "hello"; // <- Change this!
+
+  if (input === correctPassword) {
+    window.location.href = "main/index.html"; // <- Real content here
+  } else {
+    alert("Incorrect password.");
+  }
+}

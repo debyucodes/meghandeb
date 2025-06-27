@@ -9,99 +9,21 @@
       src="https://kit.fontawesome.com/3e2ecb9775.js"
       crossorigin="anonymous"
     ></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  </head>
-  <body class="home">
-    <header>
-      <nav class="browser-nav">
-        <h2>Meg & Deb</h2>
-        <ul class="hide-on-mobile">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="event.html">Schedule</a></li>
-          <li><a href="faq.html">Q & A</a></li>
-          <li><a href="crew.html">Crew</a></li>
-          <li><a href="story.html">Story</a></li>
-          <li class="rsvp"><a href="#">RSVP</a></li>
-        </ul>
-        <ul class="mobile-bar">
-          <li onclick="hideBar()" class="burger">
-            <i class="fas fa-times"></i>
-          </li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="event.html">Schedule</a></li>
-          <li><a href="faq.html">Q & A</a></li>
-          <li><a href="crew.html">Crew</a></li>
-          <li><a href="story.html">Story</a></li>
-          <li><a href="">RSVP</a></li>
-        </ul>
-        <div onclick="showBar()" class="burger burger-open">
-          <i class="fas fa-bars"></i>
-        </div>
-      </nav>
-      <div class="countdown">
-        <div class="time">
-          <h2 id="days">00</h2>
-          <p>Days</p>
-        </div>
-        <div class="time">
-          <h2 id="hours">00</h2>
-          <p>Hours</p>
-        </div>
-        <div class="time">
-          <h2 id="minutes">00</h2>
-          <p>Minutes</p>
-        </div>
-        <div class="time">
-          <h2 id="seconds">00</h2>
-          <p>Seconds</p>
-        </div>
-      </div>
-    </header>
-    <main>
-      <h1>We're getting married!</h1>
-      <div class="message">
-        <p>
-          Welcome, dear family and friends, to the beginning of our greatest
-          adventure yet.
-        </p>
-        <p>
-          We are honoured to invite you to join us as we exchange vows
-          surrounded by the beauty of the forest and the love of the people who
-          mean the most to us.
-        </p>
-        <p>
-          Here on our wedding website, you’ll find the story of how we got here,
-          all the details you’ll need for your journey to the Tiffin Centre for
-          Conservation, and a few magical touches along the way.
-        </p>
-        <p>
-          We’re counting down the days and can’t wait to celebrate with you.
-        </p>
-        <p>With love, Meg & Deb</p>
-      </div>
-      <div>
-        <div class="polaroid">
-          <img src="./assets/baby-meg.jpg" alt="meg" />
-          <img src="./assets/baby-deb.jpg" alt="deb" />
-        </div>
-        <h2>Details</h2>
-        <p><b>DATE: </b>Saturday, November 8, 2025</p>
-        <p><b>TIME:</b> 3:30 pm (Please arrive by 3:15 pm)</p>
-        <p><b>LOCATION:</b> Tiffin Centre for Conservation</p>
-        <a href="https://g.co/kgs/gwcCLV2" target="_blank"
-          ><p>8195 8th Line, Utopia, ON L0M 1T0</p></a
-        >
-        <p>
-          Join us in the heart of the forest as we celebrate our special day
-          surrounded by the beauty and magic of nature.
-        </p>
-      </div>
-    </main>
-    <footer>
-      <p>Built and designed by Meg & Deb.</p>
-    </footer>
     <script type="text/javascript" src="./script.js"></script>
+  </head>
+  <body class="welcome">
+    <div class="overlay-1"></div>
+    <div class="overlay-2"></div>
+    <div class="banner-text">
+      <!-- <h1>Meg Corry <br />&<br />Deb Yu</h1> -->
+      <div class="typewriter">
+        <!-- <h1>11.08.2025</h1> -->
+        <h1>Meg Corry & Deb Yu</h1>
+        <p>Enter Password to Access</p>
+        <input type="password" id="password" placeholder="Enter password" />
+        <button onclick="checkPassword()">Submit</button>
+      </div>
+      <a class="btn" href="home.html">enter</a>
+    </div>
   </body>
 </html>
