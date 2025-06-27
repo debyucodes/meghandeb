@@ -74,7 +74,7 @@ inputElement.addEventListener("keyup", function (event) {
 
 function checkPassword() {
   const enteredPassword = inputElement.value; // Use the global inputElement here
-  const correctPassword = "hello";
+  const correctPassword = "MD2025";
 
   if (enteredPassword === correctPassword) {
     window.location.href = "main/home.html";
