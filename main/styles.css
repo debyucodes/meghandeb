@@ -4,8 +4,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
 
 /* GLOBAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  /* background: #2e382e; */
   background: rgba(46, 56, 46);
   color: #f4ebe2;
   text-align: center;
@@ -16,6 +21,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
+  overflow: hidden;
+}
+
+html {
   overflow-x: hidden;
 }
 
@@ -84,18 +93,6 @@ nav ul {
   justify-content: center;
   align-items: center;
 }
-
-/* nav ul a {
-  color: #f4ebe2;
-  padding: 0 20px;
-  font-size: 0.8em;
-  transition: 0.5s ease all;
-}
-
-nav ul a:hover {
-  color: rgba(46, 56, 46);
-  border-bottom: 1px solid rgba(46, 56, 46);
-} */
 
 nav ul a {
   color: #f4ebe2;
@@ -171,6 +168,7 @@ footer {
   padding: 10px 40px;
   background: #f4ebe2;
   border: 2px solid #f4ebe2;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -198,13 +196,12 @@ footer {
 
 /* HOME */
 body.home {
-  background-image: url(./assets/DMSP4NFINAL_websize.jpg);
+  background-image: url(../assets/DMSP4NFINAL_websize.jpg);
   background-position: center;
 }
 
 .home h1 {
   font-size: 5em;
-  /* margin-top: -200px; */
   padding: 0;
 }
 
@@ -214,15 +211,11 @@ body.home main div,
 }
 
 body.home main {
-  /* background: rgb(244, 235, 226, 0.9); */
   background: rgb(46, 56, 46, 0.9);
   width: 100%;
-  /* color: #2e382e; */
   color: rgb(244, 235, 226);
   display: flex;
   flex-direction: column;
-  /* border-radius: 400px 400px 0 0; */
-  /* position: relative; */
 }
 
 body.home .icon {
@@ -268,7 +261,7 @@ body.home .icon {
 
 /* STORY PAGE */
 .story header {
-  background-image: url(./assets/DMSP1FINAL_websize.jpg);
+  background-image: url(../assets/DMSP1FINAL_websize.jpg);
   background-position: center;
 }
 
@@ -277,7 +270,7 @@ body.home .icon {
 }
 
 .daily-prophet {
-  background-image: url(./assets/paper.jpg);
+  background-image: url(../assets/paper.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: #222;
@@ -353,14 +346,14 @@ body.home .icon {
 }
 
 .crew header {
-  background-image: url(./assets/DMSP3FINAL_websize.jpg);
+  background-image: url(../assets/DMSP3FINAL_websize.jpg);
 }
 
 .crew .page {
   /* background: linear-gradient(to right, #e0c9a6 92%, #696355 100%); */
   padding-bottom: 50px;
   border-radius: 20px;
-  background-image: url("./assets/paper.jpg");
+  background-image: url("../assets/paper.jpg");
   background-size: cover;
   margin-right: 5px;
   position: relative;
@@ -373,7 +366,7 @@ body.home .icon {
   left: -0%;
   width: 300px;
   height: 400px;
-  background-image: url("./assets/flower.png");
+  background-image: url("../assets/flower.png");
   background-size: contain;
   background-repeat: no-repeat;
   transform: rotate(-40deg);
@@ -386,7 +379,7 @@ body.home .icon {
   right: -5%;
   width: 300px;
   height: 400px;
-  background-image: url("./assets/yellow-bug.png");
+  background-image: url("../assets/yellow-bug.png");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 0;
@@ -396,7 +389,7 @@ body.home .icon {
   /* background: linear-gradient(to left, #e0c9a6 95%, #696355 100%); */
   padding-bottom: 50px;
   border-radius: 20px;
-  background-image: url("./assets/paper.jpg");
+  background-image: url("../assets/paper.jpg");
   background-size: cover;
   margin-left: 5px;
 }
@@ -492,7 +485,7 @@ body.home .icon {
 }
 
 .cards .card-image {
-  background: url(./assets/moody-eerie-chatgpt.jpeg);
+  background: url(../assets/moody-eerie-chatgpt.jpeg);
   width: 140px;
   object-fit: cover;
 }
@@ -517,7 +510,7 @@ body.home .icon {
 
 /* Q&A */
 .faq header {
-  background-image: url(./assets/hands.jpg);
+  background-image: url(../assets/hands.jpg);
 }
 
 .faq .notes {
@@ -574,7 +567,7 @@ body.home .icon {
 
 /* EVENT DETAILS */
 .event header {
-  background-image: url(./assets/DBN24final_1.jpg);
+  background-image: url(../assets/DBN24final_1.jpg);
   background-position: top;
   position: relative;
 }
@@ -613,14 +606,16 @@ body.home .icon {
 
 /* WELCOME PAGE */
 .welcome {
-  background-image: url(./assets/DMSP5NFINAL_websize.jpg);
+  background-image: url(../assets/DMSP5NFINAL_websize.jpg);
   display: grid;
   place-items: center;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .overlay-1 {
@@ -640,14 +635,18 @@ body.home .icon {
   position: absolute;
   top: 0;
   left: 0;
-  width: 250.625em;
-  height: 203.8em;
+  /* width: 250.625em; */
+  width: 300%;
+  /* height: 203.8em; */
+  height: 100vh;
   background: url(https://terriotech.com/cloud-overlay.png) 0 100% repeat-x;
   -webkit-animation: cloudLoop 80s linear infinite;
   animation: cloudLoop 80s linear infinite;
   z-index: 2;
   pointer-events: none;
-  height: 43.75em;
+  max-width: 150%;
+  /* height: 43.75em; */
+  max-height: 100vh;
 }
 @-webkit-keyframes cloudLoop {
   0% {
@@ -675,6 +674,14 @@ body.home .icon {
 
 .welcome .banner-text {
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.welcome .banner-text input {
+  margin: 10px 0;
+  padding: 10px;
 }
 
 .typewriter {
@@ -821,6 +828,10 @@ body.home .icon {
 }
 
 @media (max-width: 500px) {
+  .typewriter h1 {
+    font-size: 2em;
+  }
+
   .home h1 {
     font-size: 2em;
   }
@@ -851,5 +862,10 @@ body.home .icon {
 
   .tab .tab-label {
     width: 90%;
+  }
+
+  .overlay-1,
+  .overlay-2 {
+    display: none'
   }
 }
