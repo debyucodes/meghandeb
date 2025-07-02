@@ -207,7 +207,7 @@ body.home {
 
 body.home main div,
 .countdown p {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 body.home main {
@@ -235,6 +235,10 @@ body.home .icon {
   display: flex;
   margin: 0 auto;
   justify-content: center;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 /* homepage polaroid hanger */
@@ -252,6 +256,7 @@ body.home .icon {
   border: 10px solid white;
   position: relative;
   margin: 15px;
+  border-radius: 10px;
 }
 
 .message {
@@ -824,6 +829,11 @@ body.home .icon {
 
   .tab input:checked ~ .tab-content {
     max-height: 40rem;
+  }
+
+  .countdown {
+    backdrop-filter: none;
+    box-shadow: none;
   }
 }
 
