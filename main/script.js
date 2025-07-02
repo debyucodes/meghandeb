@@ -77,7 +77,7 @@ function checkPassword() {
   const correctPassword = "MD2025";
 
   if (enteredPassword === correctPassword) {
-    window.location.href = "main/home.html";
+    window.location.href = "main/home";
   } else {
     alert("Incorrect password.");
   }
