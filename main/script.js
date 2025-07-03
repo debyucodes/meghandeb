@@ -70,7 +70,7 @@ function checkPassword() {
   const correctPassword = "MD2025";
 
   if (enteredPassword === correctPassword) {
-    window.location.href = "main/home.html";
+    window.location.href = "main/home";
   } else {
     alert("Incorrect password.");
     inputElement.value = "";
@@ -78,18 +78,3 @@ function checkPassword() {
 }
 
 window.checkPassword = checkPassword;
-
-// form.addEventListener("submit", function (event) {
-//   event.preventDefault(); // prevent page reload
-
-//   const enteredPassword = inputElement.value;
-//   const correctPassword = "MD2025";
-
-//   if (enteredPassword === correctPassword) {
-//     window.location.href = "/main/home.html"; // adjust path if needed
-//   } else {
-//     alert("Incorrect password.");
-//     input.value = "";
-//     input.focus();
-//   }
-// });
