@@ -340,7 +340,7 @@ body.home .icon {
   position: relative;
   display: flex;
   flex-wrap: wrapped;
-  margin: 30px;
+  margin: 0 30px;
   position: relative;
 }
 
