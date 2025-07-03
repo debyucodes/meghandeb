@@ -22,13 +22,17 @@
         <h1>Meg Corry & Deb Yu</h1>
       </div>
       <!-- <p>Enter Password to Access</p> -->
-      <input
-        type="password"
-        id="password"
-        placeholder="Enter Password to Access"
-      />
-      <button class="btn" onclick="checkPassword()">enter</button>
-      <!-- <a class="btn" href="home.html">enter</a> -->
+      <form action="loginForm">
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password to Access"
+        />
+        <button type="submit" class="btn" onclick="checkPassword()">
+          enter
+        </button>
+        <!-- <a class="btn" href="home.html">enter</a> -->
+      </form>
     </div>
     <script type="text/javascript" src="main/script.js"></script>
   </body>

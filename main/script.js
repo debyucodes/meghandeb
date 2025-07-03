@@ -51,23 +51,40 @@ function hideBar() {
 console.log("this is my fake password login, if you are reading this GG lol.");
 
 // Get the input element once — global in this script
-const inputElement = document.getElementById("password");
+// const form = document.getElementById("loginForm");
+// const inputElement = document.getElementById("password");
 
-// Add event listener to listen for Enter key
-inputElement.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    checkPassword();
-  }
-});
+// // Add event listener to listen for Enter key
+// inputElement.addEventListener("keydown", function (event) {
+//   if (event.key === "Enter") {
+//     checkPassword();
+//   }
+// });
 
-function checkPassword() {
+// function checkPassword() {
+//   const enteredPassword = inputElement.value;
+//   const correctPassword = "MD2025";
+
+//   if (enteredPassword === correctPassword) {
+//     window.location.href = "main/home";
+//   } else {
+//     alert("Incorrect password.");
+//     inputElement.value = "";
+//   }
+// }
+
+const form = document.getElementById("loginForm");
+const inputElement = document.getElementById("passwordInput");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // prevent page reload
   const enteredPassword = inputElement.value;
   const correctPassword = "MD2025";
 
   if (enteredPassword === correctPassword) {
-    window.location.href = "main/home";
+    window.location.href = "/main/home";
   } else {
     alert("Incorrect password.");
     inputElement.value = "";
   }
-}
+});
