@@ -77,6 +77,8 @@ function checkPassword() {
   }
 }
 
+window.checkPassword = checkPassword;
+
 // form.addEventListener("submit", function (event) {
 //   event.preventDefault(); // prevent page reload
 
