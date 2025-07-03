@@ -172,8 +172,6 @@ footer {
 }
 
 .btn:hover {
-  /* color: #2e382e; */
-  /* background: #f4ebe2; */
   color: #f4ebe2;
   background: #2e382e;
   transition: 0.2s ease-out;
