@@ -54,7 +54,7 @@ console.log("this is my fake password login, if you are reading this GG lol.");
 const inputElement = document.getElementById("password");
 
 // Add event listener to listen for Enter key
-inputElement.addEventListener("keyup", function (event) {
+inputElement.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     checkPassword();
   }
@@ -68,5 +68,6 @@ function checkPassword() {
     window.location.href = "main/home";
   } else {
     alert("Incorrect password.");
+    inputElement.value = "";
   }
 }
