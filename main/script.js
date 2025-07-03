@@ -49,19 +49,6 @@ function hideBar() {
 
 console.log("this is my fake password login, if you are reading this GG lol.");
 
-// const input = document.getElementById("password");
-
-// function checkPassword() {
-//   const input = document.getElementById("password").value;
-//   const correctPassword = "hello"; // ← change this
-
-//   if (input === correctPassword) {
-//     window.location.href = "main/home.html"; // ← real site starts here
-//   } else {
-//     alert("Incorrect password.");
-//   }
-// }
-
 // Get the input element once — global in this script
 const inputElement = document.getElementById("password");
 
@@ -73,7 +60,7 @@ inputElement.addEventListener("keyup", function (event) {
 });
 
 function checkPassword() {
-  const enteredPassword = inputElement.value; // Use the global inputElement here
+  const enteredPassword = inputElement.value;
   const correctPassword = "MD2025";
 
   if (enteredPassword === correctPassword) {
