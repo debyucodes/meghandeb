@@ -26,6 +26,7 @@ body {
 
 html {
   overflow-x: hidden;
+  height: 100%;
 }
 
 .wrapper {
@@ -837,6 +838,10 @@ body.home .icon {
 }
 
 @media (max-width: 500px) {
+body {
+  background-attachment: scroll;
+}
+
   .typewriter h1 {
     font-size: 2em;
   }
